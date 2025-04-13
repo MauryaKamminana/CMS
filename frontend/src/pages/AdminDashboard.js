@@ -116,7 +116,7 @@ function AdminDashboard() {
         <div className="admin-menu-item">
           <h3>Academic Resources</h3>
           <p>Manage learning materials and resources</p>
-          <Link to="/admin/resources" className="btn btn-primary">
+          <Link to="/resources" className="btn btn-primary">
             Manage Resources
           </Link>
         </div>
@@ -124,7 +124,7 @@ function AdminDashboard() {
         <div className="admin-menu-item">
           <h3>Assignments</h3>
           <p>Oversee assignments and submissions</p>
-          <Link to="/admin/assignments" className="btn btn-primary">
+          <Link to="/assignments" className="btn btn-primary">
             Manage Assignments
           </Link>
         </div>
@@ -132,7 +132,7 @@ function AdminDashboard() {
         <div className="admin-menu-item">
           <h3>Attendance</h3>
           <p>Monitor attendance records</p>
-          <Link to="/admin/attendance" className="btn btn-primary">
+          <Link to="/attendance" className="btn btn-primary">
             View Attendance
           </Link>
         </div>
