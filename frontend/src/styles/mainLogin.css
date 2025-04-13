@@ -1,0 +1,151 @@
+/* Page wrapper */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login card */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.login-container h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* Primary button */
+.btn-primary {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #3a7bc8;
+}
+
+/* Social login */
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-google {
+  background-color: #db4437;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-google:hover {
+  background-color: #c23321;
+}
+
+/* Footer links */
+.login-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.login-footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.login-footer a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Canteen link button */
+.canteen-link {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.btn-canteen {
+  display: inline-block;
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-canteen:hover {
+  background-color: #5a6268;
+}
+
+/* Error alert */
+.alert.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
