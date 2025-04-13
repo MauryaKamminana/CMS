@@ -1,27 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function Dashboard() {
   const { user } = useAuth();
-  
-  const isAdmin = user && user.role === 'admin';
-  const isFaculty = user && (user.role === 'faculty' || user.role === 'admin');
+
+  const isAdmin = user && user.role === "admin";
+  const isFaculty = user && (user.role === "faculty" || user.role === "admin");
 
   return (
     <div className="dashboard-container">
-      <h1>Dashboard</h1>
-      
+      <h1 style={{ paddingBottom: "20px" }}>Dashboard</h1>
+
       <div className="user-info">
         <h2>Welcome, {user.name}</h2>
         <p>Email: {user.email}</p>
         <p>Role: {user.role}</p>
-        
+
         <div className="profile-actions">
           <Link to="/profile" className="btn btn-primary">
             Edit Profile
           </Link>
-          
+
           {isAdmin && (
             <Link to="/admin" className="btn btn-secondary">
               Admin Dashboard
@@ -29,32 +29,38 @@ function Dashboard() {
           )}
         </div>
       </div>
-      
+
       <div className="dashboard-grid">
         {/* Course Management - Visible to all but with role-specific actions */}
         <div className="dashboard-card">
           <h3>Course Management</h3>
-          <p>{isAdmin ? 'Create and manage courses' : isFaculty ? 'Manage your assigned courses' : 'View your enrolled courses'}</p>
-          
+          <p>
+            {isAdmin
+              ? "Create and manage courses"
+              : isFaculty
+              ? "Manage your assigned courses"
+              : "View your enrolled courses"}
+          </p>
+
           {isAdmin && (
             <Link to="/admin/courses" className="btn btn-primary">
               Manage Courses
             </Link>
           )}
-          
+
           {isFaculty && !isAdmin && (
             <Link to="/faculty/dashboard" className="btn btn-primary">
               My Courses
             </Link>
           )}
-          
+
           {!isFaculty && (
             <Link to="/student/dashboard" className="btn btn-primary">
               My Courses
             </Link>
           )}
         </div>
-        
+
         <div className="dashboard-card">
           <h3>Announcements</h3>
           <p>View and manage college announcements</p>
@@ -62,7 +68,7 @@ function Dashboard() {
             Go to Announcements
           </Link>
         </div>
-        
+
         <div className="dashboard-card">
           <h3>Lost & Found</h3>
           <p>Report lost items or check found items</p>
@@ -70,7 +76,7 @@ function Dashboard() {
             Go to Lost & Found
           </Link>
         </div>
-        
+
         <div className="dashboard-card">
           <h3>Assignments</h3>
           <p>View and submit assignments</p>
@@ -78,7 +84,7 @@ function Dashboard() {
             Go to Assignments
           </Link>
         </div>
-        
+
         <div className="dashboard-card">
           <h3>Attendance</h3>
           <p>Check your attendance</p>
@@ -86,7 +92,7 @@ function Dashboard() {
             View Attendance
           </Link>
         </div>
-        
+
         <div className="dashboard-card">
           <h3>Academic Resources</h3>
           <p>Access academic resources</p>
@@ -99,4 +105,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard; 
+export default Dashboard;
