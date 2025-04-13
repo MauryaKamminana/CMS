@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import ChangeRoleModal from '../components/modals/ChangeRoleModal';
+import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import ChangeRoleModal from "../components/modals/ChangeRoleModal";
 
 function AdminDashboard() {
   const { user } = useAuth();
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedUser, setSelectedUser] = useState(null);
-  const [selectedRole, setSelectedRole] = useState('');
+  const [selectedRole, setSelectedRole] = useState("");
 
   useEffect(() => {
     fetchUsers();
@@ -19,11 +19,11 @@ function AdminDashboard() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('/api/users');
+      const res = await axios.get("/api/users");
       setUsers(res.data.data);
       setLoading(false);
     } catch (error) {
-      toast.error('Failed to fetch users');
+      toast.error("Failed to fetch users");
       setLoading(false);
     }
   };
@@ -35,41 +35,45 @@ function AdminDashboard() {
 
   const closeRoleModal = () => {
     setSelectedUser(null);
-    setSelectedRole('');
+    setSelectedRole("");
   };
 
   const updateUserRole = async () => {
     try {
       const res = await axios.put(`/api/users/${selectedUser._id}`, {
-        role: selectedRole
+        role: selectedRole,
       });
-      
+
       if (res.data.success) {
         // Update the user in the state
-        setUsers(users.map(u => 
-          u._id === selectedUser._id ? { ...u, role: selectedRole } : u
-        ));
-        
-        toast.success(`Role updated to ${selectedRole} for ${selectedUser.name}`);
+        setUsers(
+          users.map((u) =>
+            u._id === selectedUser._id ? { ...u, role: selectedRole } : u
+          )
+        );
+
+        toast.success(
+          `Role updated to ${selectedRole} for ${selectedUser.name}`
+        );
         closeRoleModal();
       }
     } catch (error) {
-      toast.error('Failed to update user role');
+      toast.error("Failed to update user role");
     }
   };
 
   const deleteUser = async (userId) => {
-    if (window.confirm('Are you sure you want to delete this user?')) {
+    if (window.confirm("Are you sure you want to delete this user?")) {
       try {
         const res = await axios.delete(`/api/users/${userId}`);
-        
+
         if (res.data.success) {
           // Remove user from list
-          setUsers(users.filter(user => user._id !== userId));
-          toast.success('User deleted successfully');
+          setUsers(users.filter((user) => user._id !== userId));
+          toast.success("User deleted successfully");
         }
       } catch (error) {
-        toast.error('Error deleting user');
+        toast.error("Error deleting user");
       }
     }
   };
@@ -77,8 +81,8 @@ function AdminDashboard() {
   return (
     <div className="admin-dashboard">
       <h1>Admin Dashboard</h1>
-      <p>Welcome, {user.name}!</p>
-      
+      <p style={{ paddingBottom: "20px" }}>Welcome, {user.name}!</p>
+
       <div className="admin-dashboard-highlight">
         <h2>Course Management System</h2>
         <p>Create courses, assign faculty, and enroll students</p>
@@ -91,7 +95,7 @@ function AdminDashboard() {
           </Link>
         </div>
       </div>
-      
+
       <div className="admin-menu">
         <div className="admin-menu-item">
           <h3>Course Management</h3>
@@ -100,7 +104,7 @@ function AdminDashboard() {
             Manage Courses
           </Link>
         </div>
-        
+
         <div className="admin-menu-item">
           <h3>User Management</h3>
           <p>Manage users, update roles, and handle enrollments</p>
@@ -108,7 +112,7 @@ function AdminDashboard() {
             Manage Users
           </Link>
         </div>
-        
+
         <div className="admin-menu-item">
           <h3>Academic Resources</h3>
           <p>Manage learning materials and resources</p>
@@ -116,7 +120,7 @@ function AdminDashboard() {
             Manage Resources
           </Link>
         </div>
-        
+
         <div className="admin-menu-item">
           <h3>Assignments</h3>
           <p>Oversee assignments and submissions</p>
@@ -124,7 +128,7 @@ function AdminDashboard() {
             Manage Assignments
           </Link>
         </div>
-        
+
         <div className="admin-menu-item">
           <h3>Attendance</h3>
           <p>Monitor attendance records</p>
@@ -132,7 +136,7 @@ function AdminDashboard() {
             View Attendance
           </Link>
         </div>
-        
+
         <div className="admin-menu-item">
           <h3>Announcements</h3>
           <p>Create and manage announcements</p>
@@ -158,7 +162,7 @@ function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {users.map(user => (
+                {users.map((user) => (
                   <tr key={user._id}>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
@@ -168,13 +172,13 @@ function AdminDashboard() {
                       </span>
                     </td>
                     <td>
-                      <button 
+                      <button
                         className="btn btn-small"
                         onClick={() => openRoleModal(user)}
                       >
                         Change Role
                       </button>
-                      <button 
+                      <button
                         className="btn btn-small btn-danger"
                         onClick={() => deleteUser(user._id)}
                       >
@@ -202,4 +206,4 @@ function AdminDashboard() {
   );
 }
 
-export default AdminDashboard; 
+export default AdminDashboard;
