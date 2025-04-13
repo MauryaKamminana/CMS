@@ -1,0 +1,142 @@
+/* My Applications Page Styles */
+.my-applications-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-applications-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.no-applications {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+}
+
+.btn-browse {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #4a6cf7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-browse:hover {
+  background-color: #3a5ce5;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.application-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.application-header h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #333;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.applied {
+  background-color: #e1f5fe;
+  color: #0288d1;
+}
+
+.shortlisted {
+  background-color: #fff8e1;
+  color: #ffa000;
+}
+
+.rejected {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.hired {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.application-company {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.application-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.application-actions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.btn-view {
+  background-color: #4a6cf7;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-view:hover {
+  background-color: #3a5ce5;
+}
+
+@media (max-width: 768px) {
+  .application-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .application-meta {
+    grid-template-columns: 1fr;
+  }
+} 

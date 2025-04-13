@@ -1,0 +1,128 @@
+.canteen-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.canteen-login-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.canteen-login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.canteen-login-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.canteen-login-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.canteen-login-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #3a7bc8;
+}
+
+.btn-login:disabled {
+  background-color: #a0c3e8;
+  cursor: not-allowed;
+}
+
+.social-login {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-login p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.btn-google {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-google:hover {
+  background-color: #f5f5f5;
+}
+
+.canteen-login-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.canteen-login-footer p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.canteen-login-footer a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.canteen-login-footer a:hover {
+  text-decoration: underline;
+} 

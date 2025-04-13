@@ -1,0 +1,166 @@
+.orders-management {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.orders-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.filter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.filter-label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-input,
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-clear-filters {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 24px;
+  transition: background-color 0.3s;
+}
+
+.btn-clear-filters:hover {
+  background-color: #e9ecef;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-orders p {
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #666;
+}
+
+.orders-table-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table th {
+  background-color: #f8f9fa;
+  font-weight: 500;
+  color: #333;
+  position: sticky;
+  top: 0;
+}
+
+.status-select,
+.payment-select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.status-pending {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.status-processing {
+  background-color: #b8daff;
+  color: #004085;
+}
+
+.status-ready {
+  background-color: #c3e6cb;
+  color: #155724;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.payment-pending {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.payment-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-view:hover {
+  background-color: #3a7bc8;
+} 

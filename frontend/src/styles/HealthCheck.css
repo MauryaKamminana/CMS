@@ -1,0 +1,52 @@
+.api-status {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.status-indicator.checking {
+  background-color: #f0ad4e;
+  animation: pulse 1s infinite;
+}
+
+.status-indicator.online {
+  background-color: #5cb85c;
+}
+
+.status-indicator.offline,
+.status-indicator.error {
+  background-color: #d9534f;
+}
+
+.error-message {
+  margin-left: 10px;
+  color: #d9534f;
+  font-size: 11px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+} 

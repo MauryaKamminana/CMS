@@ -1,0 +1,413 @@
+/* Job Detail Page Styles */
+.job-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.job-detail-header {
+  margin-bottom: 30px;
+}
+
+.job-title-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.job-title-section h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.job-type, .job-status {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.fulltime {
+  background-color: #e1f5fe;
+  color: #0288d1;
+}
+
+.parttime {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.internship {
+  background-color: #fff8e1;
+  color: #ffa000;
+}
+
+.contract {
+  background-color: #f3e5f5;
+  color: #8e24aa;
+}
+
+.remote {
+  background-color: #e0f2f1;
+  color: #00796b;
+}
+
+.status-open {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-closed {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.status-draft {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+.job-company-section {
+  margin-bottom: 15px;
+}
+
+.job-company-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 5px 0;
+  color: #444;
+}
+
+.job-location {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #555;
+}
+
+.job-detail-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.job-main-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+}
+
+.job-section {
+  margin-bottom: 30px;
+}
+
+.job-section h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.job-description, .job-requirements, .application-process {
+  line-height: 1.6;
+  color: #444;
+}
+
+.job-description p, .job-requirements p, .application-process p {
+  margin-bottom: 15px;
+}
+
+.job-sidebar > div {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.job-sidebar h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-apply {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-apply:hover {
+  background-color: #3a5ce5;
+}
+
+.btn-apply:disabled {
+  background-color: #a0aef0;
+  cursor: not-allowed;
+}
+
+.already-applied {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-applied {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: not-allowed;
+  width: 100%;
+  text-align: center;
+}
+
+.application-status-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.application-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+
+.application-status-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.status-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #495057;
+  margin: 0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-bar {
+  height: 8px;
+  width: 50px;
+  border-radius: 4px;
+}
+
+.status-text {
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-description {
+  font-size: 0.9rem;
+  color: #495057;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e9ecef;
+}
+
+.status-description p {
+  margin: 0;
+}
+
+.status-pending {
+  color: #f0ad4e;
+  font-weight: 600;
+}
+
+.status-shortlisted {
+  color: #5bc0de;
+  font-weight: 600;
+}
+
+.status-selected {
+  color: #5cb85c;
+  font-weight: 600;
+}
+
+.status-rejected {
+  color: #d9534f;
+  font-weight: 600;
+}
+
+.status-onhold {
+  color: #777777;
+  font-weight: 600;
+}
+
+.deadline-passed {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  color: #d32f2f;
+}
+
+.login-prompt {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.login-prompt a {
+  color: #4a6cf7;
+  text-decoration: underline;
+}
+
+.eligibility-details {
+  color: #555;
+}
+
+.eligibility-item {
+  margin-bottom: 15px;
+}
+
+.eligibility-item ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.eligibility-item li {
+  margin-bottom: 5px;
+}
+
+.contact-card a {
+  color: #4a6cf7;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-edit, .btn-view-apps {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-edit {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #f57c00;
+}
+
+.btn-view-apps {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.btn-view-apps:hover {
+  background-color: #3a5ce5;
+}
+
+@media (max-width: 768px) {
+  .job-detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .job-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.attachments-list {
+  margin-top: 15px;
+}
+
+.attachment-item {
+  margin-bottom: 10px;
+}
+
+.attachment-link {
+  display: inline-flex;
+  align-items: center;
+  color: #4a6cf7;
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.attachment-link:hover {
+  background-color: #e0e0e0;
+  text-decoration: underline;
+}
+
+.attachment-link::before {
+  content: "📎";
+  margin-right: 8px;
+}
+
+.application-link-container {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.application-link {
+  display: inline-block;
+  color: #4a6cf7;
+  word-break: break-all;
+  margin-top: 5px;
+}
+
+.application-link:hover {
+  text-decoration: underline;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+} 

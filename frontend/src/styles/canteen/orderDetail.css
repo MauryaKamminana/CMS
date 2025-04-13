@@ -1,0 +1,162 @@
+.order-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.order-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.order-detail-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.order-id {
+  color: #666;
+  font-size: 16px;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-back {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #e9ecef;
+}
+
+.order-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.order-info {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.info-value {
+  color: #666;
+}
+
+.status-select,
+.payment-select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.status-pending {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.status-processing {
+  background-color: #b8daff;
+  color: #004085;
+}
+
+.status-ready {
+  background-color: #c3e6cb;
+  color: #155724;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.payment-pending {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.payment-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.order-items-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.items-table th {
+  background-color: #f8f9fa;
+  font-weight: 500;
+  color: #333;
+}
+
+.items-table tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .order-content {
+    grid-template-columns: 1fr;
+  }
+} 
