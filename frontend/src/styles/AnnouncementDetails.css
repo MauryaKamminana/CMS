@@ -1,0 +1,12 @@
+.announcement-actions .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.announcement-actions .admin-buttons {
+  display: flex;
+  gap: 10px;
+}

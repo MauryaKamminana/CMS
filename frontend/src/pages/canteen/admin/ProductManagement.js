@@ -1,85 +1,87 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import axios from '../../../utils/axiosConfig';
-import '../../../styles/canteen/productManagement.css';
+import React, { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import axios from "../../../utils/axiosConfig";
+import "../../../styles/canteen/productManagement.css";
 
 function ProductManagement() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState({
-    category: '',
-    search: '',
-    available: ''
+    category: "",
+    search: "",
+    available: "",
   });
-  
+
   const fetchProducts = useCallback(async () => {
     try {
       setLoading(true);
-      
+
       // Build query params
       const params = new URLSearchParams();
-      if (filter.category) params.append('category', filter.category);
-      if (filter.search) params.append('search', filter.search);
-      if (filter.available) params.append('available', filter.available);
-      
-      const response = await axios.get(`/api/canteen/products?${params.toString()}`);
-      
+      if (filter.category) params.append("category", filter.category);
+      if (filter.search) params.append("search", filter.search);
+      if (filter.available) params.append("available", filter.available);
+
+      const response = await axios.get(
+        `/api/canteen/products?${params.toString()}`
+      );
+
       if (response.data.success) {
         setProducts(response.data.data);
       } else {
-        toast.error('Failed to load products');
+        toast.error("Failed to load products");
       }
     } catch (error) {
-      console.error('Error fetching products:', error);
-      toast.error('Error loading products');
+      console.error("Error fetching products:", error);
+      toast.error("Error loading products");
     } finally {
       setLoading(false);
     }
   }, [filter]);
-  
+
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
-  
+
   const handleFilterChange = (e) => {
     setFilter({
       ...filter,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
-  
+
   const handleDeleteProduct = async (id) => {
-    if (window.confirm('Are you sure you want to delete this product?')) {
+    if (window.confirm("Are you sure you want to delete this product?")) {
       try {
         const response = await axios.delete(`/api/canteen/products/${id}`);
-        
+
         if (response.data.success) {
-          toast.success('Product deleted successfully');
+          toast.success("Product deleted successfully");
           fetchProducts();
         } else {
-          toast.error('Failed to delete product');
+          toast.error("Failed to delete product");
         }
       } catch (error) {
-        console.error('Error deleting product:', error);
-        toast.error('Error deleting product');
+        console.error("Error deleting product:", error);
+        toast.error("Error deleting product");
       }
     }
   };
-  
+
   const formatCurrency = (amount) => {
     return `₹${amount.toFixed(2)}`;
   };
-  
+
   return (
     <div className="product-management-container">
       <div className="product-management-header">
-        <h1>Product Management</h1>
+        <h1 style={{ paddingBottom: "20px" }}>Product Management</h1>
         <Link to="/canteen/admin/products/new" className="btn-add-product">
           Add New Product
         </Link>
       </div>
-      
+
       <div className="product-filters">
         <div className="filter-group">
           <label htmlFor="search">Search:</label>
@@ -92,7 +94,7 @@ function ProductManagement() {
             placeholder="Search products..."
           />
         </div>
-        
+
         <div className="filter-group">
           <label htmlFor="category">Category:</label>
           <select
@@ -110,7 +112,7 @@ function ProductManagement() {
             <option value="Desserts">Desserts</option>
           </select>
         </div>
-        
+
         <div className="filter-group">
           <label htmlFor="available">Availability:</label>
           <select
@@ -124,7 +126,7 @@ function ProductManagement() {
           </select>
         </div>
       </div>
-      
+
       {loading ? (
         <div className="loading">Loading products...</div>
       ) : products.length === 0 ? (
@@ -136,7 +138,7 @@ function ProductManagement() {
         </div>
       ) : (
         <div className="products-grid">
-          {products.map(product => (
+          {products.map((product) => (
             <div key={product._id} className="product-card">
               <div className="product-image">
                 <img src={product.imageUrl} alt={product.name} />
@@ -144,22 +146,28 @@ function ProductManagement() {
                   <div className="unavailable-badge">Unavailable</div>
                 )}
               </div>
-              
+
               <div className="product-details">
                 <h3>{product.name}</h3>
                 <p className="product-category">{product.category}</p>
                 <p className="product-price">{formatCurrency(product.price)}</p>
                 <p className="product-quantity">
-                  Quantity: {product.quantity} {product.quantity === 0 && <span className="out-of-stock">(Out of Stock)</span>}
+                  Quantity: {product.quantity}{" "}
+                  {product.quantity === 0 && (
+                    <span className="out-of-stock">(Out of Stock)</span>
+                  )}
                 </p>
               </div>
-              
+
               <div className="product-actions">
-                <Link to={`/canteen/admin/products/${product._id}/edit`} className="btn-edit">
+                <Link
+                  to={`/canteen/admin/products/${product._id}/edit`}
+                  className="btn-edit"
+                >
                   Edit
                 </Link>
-                <button 
-                  className="btn-delete" 
+                <button
+                  className="btn-delete"
                   onClick={() => handleDeleteProduct(product._id)}
                 >
                   Delete
@@ -173,4 +181,4 @@ function ProductManagement() {
   );
 }
 
-export default ProductManagement; 
+export default ProductManagement;
