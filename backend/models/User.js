@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+const ALLOWED_DOMAIN = process.env.ALLOWED_EMAIL_DOMAIN || "iiitdwd.ac.in"; // fallback if not set
+
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -48,6 +50,10 @@ const UserSchema = new mongoose.Schema({
     batch: String,
     skills: String,
     resumeLink: String,
+  },
+  status: {
+    type: String,
+    enum: ["approved", "pending"],
   },
 });
 

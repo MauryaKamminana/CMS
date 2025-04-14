@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import ChangeRoleModal from "../components/modals/ChangeRoleModal";
+import "../styles/AdminDashboard.css";
 
 function AdminDashboard() {
   const { user } = useAuth();
@@ -144,6 +145,14 @@ function AdminDashboard() {
             Manage Announcements
           </Link>
         </div>
+
+        <div className="admin-menu-item">
+          <h3>Approve Users</h3>
+          <p>Grant access to out of organization users</p>
+          <Link to="/approve/new-users" className="btn btn-primary">
+            Give Access
+          </Link>
+        </div>
       </div>
 
       <div className="admin-content">
@@ -172,18 +181,20 @@ function AdminDashboard() {
                       </span>
                     </td>
                     <td>
-                      <button
-                        className="btn btn-small"
-                        onClick={() => openRoleModal(user)}
-                      >
-                        Change Role
-                      </button>
-                      <button
-                        className="btn btn-small btn-danger"
-                        onClick={() => deleteUser(user._id)}
-                      >
-                        Delete
-                      </button>
+                      <div className="action-buttons">
+                        <button
+                          className="btn btn-small btn-outline"
+                          onClick={() => openRoleModal(user)}
+                        >
+                          Change Role
+                        </button>
+                        <button
+                          className="btn btn-small btn-danger"
+                          onClick={() => deleteUser(user._id)}
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}

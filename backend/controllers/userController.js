@@ -488,3 +488,22 @@ exports.getProfile = async (req, res) => {
     });
   }
 };
+
+exports.getUsersWithStatus = async (req, res) => {
+  try {
+    const status = req.query.status;
+    const users = await User.find({ status });
+    res.status(200).json({
+      success: true,
+      count: users.length,
+      data: users,
+    });
+  } catch (error) {
+    console.error("Error getting users by status:", error);
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+      error: error.message,
+    });
+  }
+};

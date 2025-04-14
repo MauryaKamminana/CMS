@@ -1,0 +1,95 @@
+/* ApproveUsers.css - Spacious Modern Redesign */
+
+.approve-users-container {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 50px 40px;
+  background: #f4f6fa;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: #2d2d2d;
+}
+
+.approve-users-container h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.user-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.035);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+}
+
+.avatar-placeholder {
+  background-color: #e0e7ff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #3b82f6;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.approve-button {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  font-size: 14px;
+}
+
+.approve-button:hover {
+  background-color: #059669;
+}
+
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #64748b;
+  margin-top: 20px;
+}

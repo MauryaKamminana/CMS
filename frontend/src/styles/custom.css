@@ -172,7 +172,7 @@
 }
 
 .btn-google {
-  background-color: #4285F4;
+  background-color: #4285f4;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -255,17 +255,17 @@
 }
 
 .role-student {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
 .role-faculty {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
 }
 
 .role-admin {
-  background-color: #FF9800;
+  background-color: #ff9800;
   color: white;
 }
 
@@ -390,27 +390,27 @@
 }
 
 .category-academic {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .category-event {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .category-placement {
-  background-color: #9C27B0;
+  background-color: #9c27b0;
 }
 
 .category-general {
-  background-color: #607D8B;
+  background-color: #607d8b;
 }
 
 .category-emergency {
-  background-color: #F44336;
+  background-color: #f44336;
 }
 
 .important-badge {
-  background-color: #FF9800;
+  background-color: #ff9800;
   color: white;
   padding: 3px 8px;
   border-radius: 3px;
@@ -479,49 +479,63 @@
 }
 
 .lost-item-card {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #eee;
+}
+
+.lost-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .lost-item-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .lost-item-header h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .status-badge {
   display: inline-block;
-  padding: 3px 8px;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .status-lost {
-  background-color: #F44336;
+  background-color: #ff4d4f;
+  color: #fff;
 }
 
 .status-found {
-  background-color: #4CAF50;
+  background-color: #1890ff;
+  color: #fff;
 }
 
 .status-claimed {
-  background-color: #FF9800;
+  background-color: #faad14;
+  color: #fff;
 }
 
 .status-returned {
-  background-color: #2196F3;
+  background-color: #52c41a;
+  color: #fff;
 }
 
 .lost-item-details {
@@ -529,16 +543,70 @@
   margin-bottom: 15px;
 }
 
-.lost-item-description {
+.lost-item-details {
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #eee;
   margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.lost-item-details p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.lost-item-details strong {
+  font-weight: 600;
+  color: #222;
+  min-width: 80px;
+  display: inline-block;
+}
+
+.lost-item-description {
+  background-color: #fff;
+  padding: 12px 15px;
+  border-left: 4px solid #1890ff;
+  border-radius: 5px;
+  color: #555;
   font-style: italic;
-  color: #666;
+  line-height: 1.6;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .lost-item-footer {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.lost-item-footer .btn.btn-small {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.lost-item-footer .btn.btn-small:hover {
+  background-color: #1677cc;
+}
+
+.posted-by {
+  font-size: 0.85rem;
+  color: #888;
 }
 
 .posted-by {
@@ -549,17 +617,27 @@
 /* Lost Item Detail */
 .lost-item-detail {
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 40px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lost-item-detail-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.lost-item-detail-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
 }
 
 .lost-item-meta {
@@ -567,57 +645,93 @@
   font-size: 0.9rem;
 }
 
+.lost-item-meta p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.lost-item-meta strong {
+  color: #222;
+}
+
 .lost-item-detail-content {
-  margin-bottom: 20px;
+  margin: 30px 0 20px;
+}
+
+.lost-item-detail-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+.lost-item-detail-content p {
   line-height: 1.6;
+  color: #444;
 }
 
 .lost-item-image {
-  margin-bottom: 20px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .lost-item-image img {
   max-width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .lost-item-actions {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 30px;
+}
+
+.lost-item-actions .btn {
+  width: fit-content;
 }
 
 .status-actions {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+.status-actions h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
 }
 
 .status-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .status-btn {
-  font-size: 0.8rem;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .lost-btn {
-  background-color: #F44336;
+  background-color: #f44336;
 }
 
 .found-btn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .claimed-btn {
-  background-color: #FF9800;
+  background-color: #ff9800;
 }
 
 .returned-btn {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Pagination */
@@ -677,12 +791,17 @@
 }
 
 /* Assignment Styles */
-.assignments-page, .assignment-detail, .create-assignment, .edit-assignment, .submit-assignment {
+.assignments-page,
+.assignment-detail,
+.create-assignment,
+.edit-assignment,
+.submit-assignment {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.assignments-header, .assignment-detail-header {
+.assignments-header,
+.assignment-detail-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -711,12 +830,6 @@
   border-radius: 4px;
   font-size: 0.8rem;
   margin-right: 10px;
-}
-
-.status-badge {
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
 }
 
 .status-submitted {
@@ -763,7 +876,10 @@
 }
 
 /* Resource Styles */
-.resources-page, .resource-detail, .create-resource, .edit-resource {
+.resources-page,
+.resource-detail,
+.create-resource,
+.edit-resource {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -836,12 +952,15 @@
   margin: 20px 0;
 }
 
-.resource-file, .resource-link {
+.resource-file,
+.resource-link {
   margin: 20px 0;
 }
 
 /* Attendance Styles */
-.attendance-page, .mark-attendance, .student-attendance {
+.attendance-page,
+.mark-attendance,
+.student-attendance {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -889,7 +1008,8 @@
   margin-top: 20px;
 }
 
-.attendance-table th, .attendance-table td {
+.attendance-table th,
+.attendance-table td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -965,7 +1085,9 @@
   font-weight: bold;
 }
 
-.form-group input, .form-group textarea, .form-group select {
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -1026,7 +1148,9 @@
 }
 
 /* Dashboard Styles */
-.admin-dashboard, .faculty-dashboard, .student-dashboard {
+.admin-dashboard,
+.faculty-dashboard,
+.student-dashboard {
   padding: 20px;
 }
 
@@ -1132,7 +1256,8 @@
   border-collapse: collapse;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 10px;
   border: 1px solid #ddd;
 }
@@ -1160,11 +1285,13 @@
   margin: 20px 0;
 }
 
-.faculty-section, .students-section {
+.faculty-section,
+.students-section {
   margin-top: 30px;
 }
 
-.add-faculty, .add-student {
+.add-faculty,
+.add-student {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
@@ -1268,7 +1395,7 @@
   .dashboard-sections {
     grid-template-columns: 1fr;
   }
-  
+
   .admin-menu {
     grid-template-columns: 1fr;
   }
@@ -1419,20 +1546,23 @@ a {
   text-decoration: none;
 }
 
-.btn-primary, .btn-secondary, .btn-success {
+.btn-primary,
+.btn-secondary,
+.btn-success {
   color: white;
 }
 
 /* Add these styles to your existing custom.css file */
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1453,7 +1583,7 @@ main.container {
 }
 
 /* Import the HealthCheck styles */
-@import './HealthCheck.css';
+@import "./HealthCheck.css";
 
 .course-detail-page {
   padding: 20px;
@@ -1490,7 +1620,7 @@ main.container {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -1498,7 +1628,7 @@ main.container {
 
 .nav-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item h3 {
@@ -1550,7 +1680,7 @@ main.container {
   background: white;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
@@ -1559,7 +1689,7 @@ main.container {
 
 .nav-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-color: #007bff;
 }
 
@@ -1577,4 +1707,4 @@ main.container {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #e9ecef;
-} 
+}

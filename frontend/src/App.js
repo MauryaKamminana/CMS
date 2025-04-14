@@ -47,6 +47,9 @@ import CourseResources from "./pages/courses/Resources";
 import CourseAttendance from "./pages/courses/Attendance";
 import CourseStudents from "./pages/courses/Students";
 import AuthSuccess from "./pages/AuthSuccess";
+import AuthFailure from "./pages/AuthFailure";
+import AuthPending from "./pages/AuthPending";
+import ApproveUsers from "./pages/ApproveUsers";
 import SubmissionDetail from "./pages/SubmissionDetail";
 import StudentCourseDetail from "./pages/student/CourseDetail";
 import { AuthProvider } from "./context/AuthContext";
@@ -367,6 +370,8 @@ function App() {
                 }
               />
               <Route path="/auth/success" element={<AuthSuccess />} />
+              <Route path="/auth/failure" element={<AuthFailure />} />
+              <Route path="/auth/pending" element={<AuthPending />} />
               <Route
                 path="/placement/dashboard"
                 element={
@@ -492,6 +497,7 @@ function App() {
                   }
                 />
               </Route>
+              <Route path="/approve/new-users" element={<ApproveUsers />} />
             </Routes>
           </main>
           <Footer />
