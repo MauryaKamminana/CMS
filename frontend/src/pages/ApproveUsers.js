@@ -31,7 +31,7 @@ const ApproveUsers = () => {
         email,
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         setPendingUsers((prevUsers) =>
           prevUsers.filter((user) => user._id !== userId)
         );
